@@ -3,7 +3,7 @@
 
 int main() {
     int n;
-    printf("Введіть довжину послідовностей n: ");
+    printf("Введіть довжину послідовності n: ");
     scanf("%d", &n);
     if (n < 1 || n >= 10000) {
         printf("Неправильне значення n\n");
@@ -19,6 +19,6 @@ int main() {
         dp[i][2] = dp[i-1][1] % MOD;
     }
     int result = (dp[n][0] + dp[n][1] + dp[n][2]) % MOD;
-    printf("Кількість послідовностей довжиною %d: %d\n", n, result);
+    printf("Кількість шуканих послідовностей %d: %d\n", n, result);
     return 0;
 }
